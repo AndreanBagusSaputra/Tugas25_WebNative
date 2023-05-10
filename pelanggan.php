@@ -75,9 +75,10 @@
                                             <td><?= $row ['kartu_id']?></td>
                                             <td>
                                             <form action="pelanggan_controller.php" method="POST">
-                                                    <a class= "btn btn-info btn-sm" href="index.php?url=product_detail&id = <?= $row ['id'] ?>">Detail</a>
-                                                    <a class= "btn btn-warning btn-sm">Update</a>
-                                                    <a class= "btn btn-danger btn-sm">Hapus</a>
+                                                    <a class= "btn btn-info btn-sm" href="index.php?url=pelanggan_detail&id = <?= $row ['id'] ?>">Detail</a>
+                                                    <a class= "btn btn-warning btn-sm" href="index.php?url=pelanggan_form&idedit=<?= $row ['id']?>">Update</a>
+                                                    <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus" 
+                                                    onclick="return confirm('Anda yakin akan dihapus ?')">Hapus</button>
                                                     <input type="hidden" name="idx" value="<?= $row['id']?>">
                                             </form>
                                             </td>
